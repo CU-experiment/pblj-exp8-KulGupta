@@ -120,7 +120,6 @@
             pstmt.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error while logging in!");
-        }
-     }
-   }
+            System.out.println("Error while logging in!"); }
+          } 
+          }
