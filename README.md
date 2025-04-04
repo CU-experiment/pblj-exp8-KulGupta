@@ -8,7 +8,7 @@
     private static final String USER = "root";
     private static final String PASSWORD = "your_pass";
 
-   public static void main(String[] args) {
+     public static void main(String[] args) {
         try {
             // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -44,17 +44,17 @@
                     default:
                         System.out.println("Invalid choice! Try again.");
                 }
-            }
-        } catch (ClassNotFoundException e) {
+              }
+           } catch (ClassNotFoundException e) {
             System.out.println("MySQL Driver not found! Add JDBC Jar.");
-        } catch (SQLException e) {
-            System.out.println("Connection failed! Check database settings.");
+          } catch (SQLException e) {
+             System.out.println("Connection failed! Check database settings.");
             e.printStackTrace();
-        }
-    }
+           }
+       }
 
-    // Method to create users table if it doesn't exist
-    private static void createUsersTable(Connection conn) throws SQLException {
+      // Method to create users table if it doesn't exist
+        private static void createUsersTable(Connection conn) throws SQLException {
         String query = "CREATE TABLE IF NOT EXISTS users (" +
                 "id INT AUTO_INCREMENT PRIMARY KEY, " +
                 "username VARCHAR(50) UNIQUE NOT NULL, " +
